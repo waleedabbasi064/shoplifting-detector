@@ -1,0 +1,16 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# BoT-SORT Tracker Config (Optimized for Retail Persistence)
+
+tracker_type: botsort
+track_high_thresh: 0.25
+track_low_thresh: 0.05
+new_track_thresh: 0.25
+track_buffer: 300        # 10 seconds memory
+match_thresh: 0.7
+fuse_score: True         # <--- THIS WAS MISSING. IT IS REQUIRED.
+
+# BoT-SORT Specific Settings
+gmc_method: sparseOptFlow
+proximity_thresh: 0.5
+appearance_thresh: 0.25
+with_reid: True          # Enables Visual Memory

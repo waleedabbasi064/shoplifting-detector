@@ -1,0 +1,31 @@
+# crowdhuman.yaml - Configuration for CrowdHuman Dataset
+
+# Root path to the dataset (absolute or relative)
+path:../datasets/crowdhuman  
+
+# Subdirectories for training, validation, and testing images
+# Ultralytics will automatically look for labels in../labels/train derived from these paths
+train: images/train
+val: images/val
+test: images/test  # Optional
+
+# Class Configuration
+# For shoplifting detection, we focus on the single 'person' class
+nc: 1
+names:
+  0: person
+
+# Hyperparameter Overrides (Optional but Recommended for Crowds)
+# High occlusion requires specific augmentation tuning
+hsv_h: 0.015  # Hue augmentation (fraction)
+hsv_s: 0.7    # Saturation augmentation
+hsv_v: 0.4    # Value (Brightness) augmentation
+degrees: 0.0  # Rotation (keep 0 for upright pedestrians)
+translate: 0.1 # Translation
+scale: 0.5    # Scale gain (critical for detecting small/distant people)
+shear: 0.0    # Shear
+perspective: 0.0 # Perspective
+flipud: 0.0   # Vertical flip (disable for standing people)
+fliplr: 0.5   # Horizontal flip
+mosaic: 1.0   # Mosaic augmentation (essential for small object context)
+mixup: 0.1    # Mixup (keep low to avoid confusion in dense scenes)

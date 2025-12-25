@@ -1,0 +1,14 @@
+train: /home/waleed64/DETECTING_SHOPLIFTING_USING_YOLOV12-S/Dataset/train/images
+val: /home/waleed64/DETECTING_SHOPLIFTING_USING_YOLOV12-S/Dataset/valid/images
+test: /home/waleed64/DETECTING_SHOPLIFTING_USING_YOLOV12-S/Dataset/test/images
+
+nc: 2
+names: ['human', 'suspicion']
+
+roboflow:
+  workspace: jansty-lewis-xtvyi
+  project: thief-detection-rt3wb
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/jansty-lewis-xtvyi/thief-detection-rt3wb/dataset/1
+  

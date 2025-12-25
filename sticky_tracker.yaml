@@ -1,0 +1,18 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# "Small Object" Tracker Configuration
+# Optimized for distant/small bounding boxes
+
+tracker_type: botsort
+track_high_thresh: 0.25
+track_low_thresh: 0.01   # CRITICAL: Keep tracking even if confidence drops to 1% (common for small objects)
+new_track_thresh: 0.2    # Allow re-starting a track easily
+track_buffer: 300        # 10-second memory
+match_thresh: 0.4        # CRITICAL: Lowered from 0.8. Allows small boxes to "jump" without losing ID.
+min_box_area: 0          # CRITICAL: Do not filter out tiny boxes
+
+# BoT-SORT specific
+gmc_method: sparseOptFlow
+proximity_thresh: 0.6
+appearance_thresh: 0.25
+with_reid: True
+fuse_score: True

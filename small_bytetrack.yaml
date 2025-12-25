@@ -1,0 +1,13 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# ByteTrack optimized for SMALL OBJECTS and OCCLUSION
+
+tracker_type: bytetrack 
+track_high_thresh: 0.25 
+track_low_thresh: 0.01   
+new_track_thresh: 0.25   
+track_buffer: 180        
+match_thresh: 0.6       
+min_box_area: 0          
+
+# CRITICAL FIX: This was missing and caused the crash
+fuse_score: True

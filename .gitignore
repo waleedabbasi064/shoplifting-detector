@@ -1,0 +1,25 @@
+# Ignore virtual environment
+venv/
+__pycache__/
+.vscode/
+
+# Ignore heavy datasets and training logs
+datasets/
+runs/
+
+# Ignore videos and evidence
+venv/
+__pycache__/
+.vscode/
+runs/
+datasets/
+evidence/
+*.mp4
+*.avi
+*.pt
+!my_model.pt*.mp4
+*.avi
+evidence/
+
+# Ignore system files
+.DS_Store
