@@ -1,25 +1,16 @@
-# Ignore virtual environment
+# Virtual Environments
 venv/
+yolovenv/
 __pycache__/
 .vscode/
 
-# Ignore heavy datasets and training logs
-datasets/
-runs/
-
-# Ignore videos and evidence
-venv/
-__pycache__/
-.vscode/
+# Heavy Data
 runs/
 datasets/
 evidence/
+
+# Large Files
 *.mp4
 *.avi
 *.pt
-!my_model.pt*.mp4
-*.avi
-evidence/
-
-# Ignore system files
-.DS_Store
+!my_model.pt
